@@ -1,0 +1,44 @@
+@import '../../style/light-dark.scss';
+
+.checkbox {
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	@include ld-border(300);
+
+	display: flex;
+	padding: 0;
+	width: toRem(16px);
+	height: toRem(16px);
+	border-radius: toRem(4px);
+	background: var(--base---white);
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	&:focus {
+		outline: 2px solid var(--brand--600);
+		outline-offset: 2px;
+	}
+}
+
+.checked {
+	background: var(--brand--600);
+	border: solid 1px var(--brand--600);
+	color: var(--base---white);
+}
+
+.disabled {
+	@include ld-border(300);
+	@include ld-background(100);
+
+	color: var(--gray--300);
+	cursor: not-allowed;
+}
+
+.icon {
+	width: toRem(12px);
+	height: toRem(12px);
+}

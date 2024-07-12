@@ -1,0 +1,24 @@
+{
+	"name": "@panthershark/icons",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"main": "src/main.ts",
+	"scripts": {
+		"build": "node main.mjs && npm run format",
+		"format": "prettier --write \"src/*.tsx\""
+	},
+	"devDependencies": {
+		"change-case": "^5.4.4",
+		"glob": "^10.4.2",
+		"prettier": "^3.3.2",
+		"typescript": "^5.5.3"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "none",
+		"useTabs": true,
+		"tabWidth": 2,
+		"printWidth": 120
+	}
+}

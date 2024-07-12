@@ -1,0 +1,157 @@
+@import './typography.scss';
+@import './light-dark.scss';
+
+// This is a minimal reset.
+
+:root {
+	font-family: 'Inter', 'system-ui';
+	min-width: 100vw;
+	min-height: 100vh;
+	color-scheme: light dark;
+
+	body {
+		margin: 0;
+		@include ld-default-background();
+	}
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: 'Inter var', 'system-ui';
+		font-size: var(--font-base-px);
+
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-smooth: never;
+	}
+}
+
+* {
+	@include ld-default-foreground();
+}
+
+code,
+kbd,
+samp,
+pre {
+	@include ld-default-border();
+
+	font-variant: var(--font-variant-monospace);
+	background: light-dark(var(--gray-light-mode--50), var(--gray-dark-mode--50));
+	border-radius: toRem(4px);
+	padding: toRem(2px) toRem(4px);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	li {
+		padding: 0;
+	}
+}
+
+div,
+nav {
+	display: flex;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	@include font-size(display-md);
+	font-weight: var(--font-weight-semibold);
+}
+
+h2 {
+	@include font-size(display-sm);
+	font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+	@include font-size(display-md);
+	font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+	@include font-size(lg);
+	font-weight: var(--font-weight-semibold);
+}
+
+h5 {
+	@include font-size(md);
+	font-weight: var(--font-weight-semibold);
+}
+
+h6 {
+	@include font-size(md);
+	font-weight: var(--font-weight-semibold);
+}
+
+p {
+	@include font-size(md);
+	padding: toRem(4px) 0;
+	margin: 0;
+}
+
+hr {
+	flex: none;
+	width: 100%;
+	height: toRem(1px);
+	background-color: light-dark(var(--gray-light-mode--200), var(--gray-dark-mode--200));
+	border: 0;
+	margin: toRem(16px) auto;
+}
+
+strong {
+	font-weight: var(--font-weight-semibold);
+}
+
+a {
+	color: var(--brand--700);
+	color: light-dark(var(--brand--700), var(--brand--200));
+	text-decoration: none;
+}
+
+a:hover {
+	color: light-dark(var(--brand--800), var(--brand--100));
+}
+
+dialog {
+	background: light-dark(var(--gray-light-mode--25), var(--gray-dark-mode--25));
+	box-shadow: var(--shadow--xl);
+	border-radius: toRem(12px);
+	border: none;
+	padding: 0;
+
+	&::backdrop {
+		background: rgba(52, 64, 84, 0.7);
+		backdrop-filter: blur(8px);
+	}
+}
+
+button {
+	@include font-size(sm);
+
+	border: none;
+	color: light-dark(var(--gray-light-mode--800), var(--gray-dark-mode--800));
+	background-color: transparent;
+	font-family: 'Inter', 'system-ui';
+	padding: toRem(10px) toRem(16px);
+	gap: toRem(8px);
+	cursor: pointer;
+}

@@ -1,0 +1,26 @@
+@mixin ld-default-background() {
+	background-color: light-dark(var(--light-bg), var(--dark-bg));
+}
+
+@mixin ld-default-foreground() {
+	color: light-dark(var(--light-text), var(--dark-text));
+}
+
+@mixin ld-default-border() {
+	border: toRem(1px) solid light-dark(var(--gray-light-mode--200), var(--gray-dark-mode--200));
+}
+
+// usage: ld-background(100) => yields light-dark(var(--gray-light-mode--100), var(--gray-dark-mode--100));
+@mixin ld-background($intensity) {
+	background-color: light-dark(var(--gray-light-mode--#{$intensity}), var(--gray-dark-mode--#{$intensity}));
+}
+
+// usage: ld-foreground(100) => yields light-dark(var(--gray-light-mode--100), var(--gray-dark-mode--100));
+@mixin ld-foreground($intensity) {
+	color: light-dark(var(--gray-light-mode--#{$intensity}), var(--gray-dark-mode--#{$intensity}));
+}
+
+// usage: ld-border(100) => yields light-dark(var(--gray-light-mode--100), var(--gray-dark-mode--100));
+@mixin ld-border($intensity) {
+	border: toRem(1px) solid light-dark(var(--gray-light-mode--#{$intensity}), var(--gray-dark-mode--#{$intensity}));
+}

@@ -1,0 +1,12 @@
+.appLayout {
+	flex-direction: column;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+}
+
+.authThemeButton {
+	position: fixed;
+	top: toRem(16px);
+	right: toRem(24px);
+}

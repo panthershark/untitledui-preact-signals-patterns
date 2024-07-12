@@ -1,0 +1,48 @@
+@import '../../style/typography.scss';
+
+.topbar {
+	position: fixed;
+	width: 100vw;
+	height: toRem(4px);
+}
+
+.progress {
+	background-color: var(--success--500);
+	height: 100%;
+	transition: width 200ms linear;
+}
+
+.hidden {
+	background-color: transparent;
+}
+
+.err {
+	background-color: var(--error--500);
+}
+
+.progbar {
+	width: inherit;
+	display: grid;
+	grid-template-columns: 1fr toRem(32px);
+	align-items: center;
+	gap: toRem(16px);
+}
+
+.progbarProgress {
+	width: 100%;
+	border-radius: toRem(4px);
+	height: toRem(8px);
+	background-color: light-dark(var(--gray-light-mode--200), var(--gray-dark-mode--200));
+	transition: width 200ms linear;
+}
+
+.progbarInner {
+	background-color: var(--success--500);
+	border-radius: toRem(4px);
+	height: toRem(8px);
+	transition: width 200ms linear;
+}
+
+.progbarText {
+	@include font-size(sm);
+}

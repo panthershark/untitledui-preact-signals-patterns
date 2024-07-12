@@ -1,0 +1,73 @@
+@import '../../style/typography.scss';
+@import '../../style/light-dark.scss';
+
+.topnav {
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: toRem(72px);
+	border-bottom: solid 1px light-dark(var(--gray-light-mode--100), var(--gray-dark-mode--100));
+	gap: toRem(16px);
+}
+
+.left,
+.right {
+	gap: toRem(16px);
+	align-items: center;
+}
+
+.logo {
+	height: toRem(48px);
+	width: toRem(48px);
+	margin-left: toRem(32px);
+}
+
+.company {
+	align-items: center;
+	gap: toRem(10px);
+
+	.name {
+		align-items: center;
+		@include font-size(xl);
+		font-weight: var(--font-weight-semibold);
+		color: light-dark(var(--light-text), var(--dark-text));
+	}
+}
+
+.avatar {
+	@include ld-border(50);
+	@include font-size(md);
+	font-weight: var(--font-weight-semibold);
+
+	height: toRem(40px);
+	width: toRem(40px);
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+
+	background-color: light-dark(var(--gray-light-mode--100), var(--gray-dark-mode--100));
+	border-radius: 50%;
+	color: light-dark(var(--gray-light-mode--600), var(--gray-dark-mode--600));
+	margin-right: toRem(32px);
+}
+
+.menuItems {
+	gap: toRem(4px);
+	width: fit-content;
+
+	a {
+		display: flex;
+		align-items: center;
+		color: light-dark(var(--gray-light-mode--700), var(--gray-dark-mode--700));
+		padding: toRem(12px) toRem(8px);
+		border-radius: toRem(6px);
+
+		@include font-size(md);
+		font-weight: var(--font-weight-semibold);
+
+		&:hover {
+			background-color: light-dark(var(--gray-light-mode--50), var(--gray-dark-mode--50));
+		}
+	}
+}

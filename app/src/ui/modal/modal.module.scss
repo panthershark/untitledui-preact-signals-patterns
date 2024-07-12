@@ -1,0 +1,80 @@
+@import '../../style/light-dark.scss';
+
+$radiant: url('data:image/svg+xml,%3Csvg%20width%3D%22216%22%20height%3D%22216%22%20viewBox%3D%220%200%20216%20216%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cmask%20id%3D%22mask0_7449_110271%22%20style%3D%22mask-type%3Aalpha%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%22-120%22%20y%3D%22-120%22%20width%3D%22336%22%20height%3D%22336%22%3E%3Crect%20width%3D%22336%22%20height%3D%22336%22%20transform%3D%22translate(-120%20-120)%22%20fill%3D%22url(%23paint0_radial_7449_110271)%22%2F%3E%3C%2Fmask%3E%3Cg%20mask%3D%22url(%23mask0_7449_110271)%22%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%2247.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%2247.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%2271.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%2295.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%22119.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%22143.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2248%22%20r%3D%22167.5%22%20stroke%3D%22%23E4E7EC%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CradialGradient%20id%3D%22paint0_radial_7449_110271%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientUnits%3D%22userSpaceOnUse%22%20gradientTransform%3D%22translate(168%20168)%20rotate(90)%20scale(168%20168)%22%3E%3Cstop%2F%3E%3Cstop%20offset%3D%221%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3C%2Fsvg%3E');
+
+:global(.dark) {
+	.modal {
+		&:before {
+			opacity: 0.1;
+		}
+	}
+}
+
+.modal {
+	padding: toRem(24px);
+	overflow: hidden;
+	position: relative;
+	user-select: none;
+
+	&:before {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: $radiant no-repeat;
+		content: ' ';
+		top: 0;
+		left: 0;
+		opacity: 0.8;
+		z-index: -1;
+	}
+}
+
+.close {
+	position: absolute;
+	z-index: 10;
+	top: toRem(16px);
+	right: toRem(16px);
+
+	svg path {
+		@include ld-foreground(400);
+	}
+}
+
+.icon {
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 10;
+	top: toRem(24px);
+	left: toRem(24px);
+	border-radius: 50%;
+	padding: toRem(12px);
+}
+
+.success {
+	background-color: var(--success--200);
+
+	svg path {
+		color: var(--success--600);
+	}
+}
+
+.error {
+	background-color: var(--error--200);
+
+	svg path {
+		color: var(--error--600);
+	}
+}
+
+.brand {
+	background-color: var(--brand--100);
+
+	svg path {
+		color: var(--brand--600);
+	}
+}
+
+.wrap {
+	margin-top: toRem(88px);
+}

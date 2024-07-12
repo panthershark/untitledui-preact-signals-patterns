@@ -1,0 +1,63 @@
+@import '../../style/typography.scss';
+@import '../../style/light-dark.scss';
+
+:global(.dark) {
+	.textInput {
+		input {
+			&:focus,
+			&:focus-within,
+			&:focus-visible {
+				outline: none;
+				border: var(--brand--700) solid toRem(1px);
+				box-shadow:
+					var(--shadow--xs),
+					0px 0px 0px 4px var(--brand--950);
+			}
+		}
+	}
+}
+
+.textInput {
+	display: flex;
+	flex-direction: column;
+	padding: var(--form-field-padding);
+
+	label {
+		@include font-size(md);
+		font-weight: var(--font-weight-medium);
+		@include ld-default-foreground();
+		margin-bottom: var(--form-label-margin);
+	}
+
+	input {
+		@include font-size(md);
+		@include ld-default-border();
+		color: var(--light-text);
+
+		padding: toRem(10px) toRem(14px);
+		background-color: var(--base---white);
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow--xs);
+
+		&:focus,
+		&:focus-within,
+		&:focus-visible {
+			outline: none;
+			border: var(--brand--300) solid toRem(1px);
+			box-shadow:
+				var(--shadow--xs),
+				0px 0px 0px 4px var(--brand--100);
+		}
+
+		&:disabled {
+			@include ld-default-border();
+			color: var(--gray--500);
+			background: var(--gray--50);
+		}
+	}
+
+	&.fullWidth {
+		width: 100%;
+		max-width: 100%;
+	}
+}

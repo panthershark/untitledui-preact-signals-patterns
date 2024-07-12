@@ -1,0 +1,7 @@
+@import '../../style/typography.scss';
+@import '../../style/light-dark.scss';
+
+.main {
+	flex-direction: column;
+	padding: toRem(67px) toRem(88px);
+}

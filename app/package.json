@@ -1,0 +1,44 @@
+{
+	"name": "@panthershark/app",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"check": "tsc --noEmit",
+		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+		"lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+		"test": "vitest",
+		"test-watch": "vitest watch"
+	},
+	"devDependencies": {
+		"@panthershark/icons": "*",
+		"@preact/preset-vite": "^2.8.3",
+		"@preact/signals": "^1.2.3",
+		"@testing-library/preact": "^3.2.4",
+		"@types/node": "^20.14.10",
+		"autoprefixer": "^10.4.19",
+		"classnames": "^2.5.1",
+		"cssnano": "^7.0.3",
+		"happy-dom": "^14.12.3",
+		"inter-ui": "^4.0.2",
+		"postcss": "^8.4.39",
+		"postcss-rem": "^3.0.0",
+		"preact": "^10.22.1",
+		"preact-router": "^4.1.2",
+		"prettier": "^3.3.2",
+		"sass": "^1.77.6",
+		"snake-case": "^4.0.0",
+		"typescript": "^5.5.3",
+		"vite": "^5.3.3",
+		"vitest": "^1.6.0"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "none",
+		"useTabs": true,
+		"tabWidth": 2,
+		"printWidth": 120
+	}
+}

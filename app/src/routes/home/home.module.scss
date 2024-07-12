@@ -1,0 +1,20 @@
+@import '../../style/typography.scss';
+@import '../../style/light-dark.scss';
+
+.main {
+	flex-direction: column;
+	padding: toRem(67px) toRem(88px);
+}
+
+.hello {
+	@include font-size(xl);
+	font-weight: var(--font-weight-semibold);
+	border-bottom: solid toRem(1px) light-dark(var(--gray-light-mode--100), var(--gray-dark-mode--100));
+}
+
+.form {
+	flex-direction: row;
+	align-items: last baseline;
+	margin-top: toRem(12px);
+	width: toRem(420px);
+}

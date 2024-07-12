@@ -1,0 +1,24 @@
+{
+	"name": "@panthershark/api",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"main": "src/main.ts",
+	"scripts": {
+		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+		"lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+	},
+	"devDependencies": {
+		"@preact/signals": "^1.2.3",
+		"preact": "^10.22.1",
+		"prettier": "^3.3.2",
+		"typescript": "^5.5.3"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "none",
+		"useTabs": true,
+		"tabWidth": 2,
+		"printWidth": 120
+	}
+}

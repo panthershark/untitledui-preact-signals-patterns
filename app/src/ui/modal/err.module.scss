@@ -1,0 +1,24 @@
+@import '../../style/typography.scss';
+
+.err {
+	padding: 0;
+	width: toRem(550px);
+	gap: toRem(24px);
+	flex-direction: column;
+}
+.cta {
+	margin-top: toRem(32px);
+	justify-content: right;
+}
+
+.title {
+	flex-direction: column;
+	h2 {
+		@include font-size(lg);
+		font-weight: var(--font-weight-semibold);
+	}
+
+	p {
+		@include font-size(sm);
+	}
+}

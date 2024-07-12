@@ -1,0 +1,83 @@
+@import '../../style/light-dark.scss';
+
+.button {
+	display: flex;
+	padding: 0;
+	width: toRem(40px);
+	height: toRem(40px);
+	border-radius: toRem(4px);
+
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	&:focus {
+		outline: 2px solid light-dark(var(--brand--600) var(--brand--400));
+		outline-offset: 2px;
+	}
+}
+
+.primary {
+	@include ld-background(50);
+	border: solid 1px light-dark(var(--brand--600) var(--brand--400));
+	color: light-dark(var(--gray-light-mode--300), var(--gray-dark-mode--300));
+
+	&:hover {
+		background: light-dark(var(--brand--700), var(--brand--300));
+	}
+}
+
+.tertiaryGray {
+	@include ld-border(300);
+	@include ld-foreground(300);
+	@include ld-default-background();
+
+	&:hover {
+		@include ld-background(50);
+	}
+}
+
+.tertiaryGray {
+	border: solid toRem(1px) transparent;
+	color: light-dark(var(--gray-light-mode--300), var(--gray-dark-mode--300));
+	background: transparent;
+
+	&:focus {
+		outline: 2px solid light-dark(var(--brand--100), var(--gray--900));
+		outline-offset: -2px;
+	}
+
+	&:hover {
+		background: light-dark(var(--gray-light-mode--50), var(--gray-dark-mode--50));
+	}
+}
+
+.icon {
+	width: toRem(20px);
+	height: toRem(20px);
+}
+
+.sm {
+	width: toRem(36px);
+	height: toRem(36px);
+}
+
+.md {
+	width: toRem(40px);
+	height: toRem(40px);
+}
+
+.lg {
+	width: toRem(44px);
+	height: toRem(44px);
+}
+
+.plain {
+	border: solid 1px transparent;
+	background: transparent;
+
+	&:focus {
+		outline: 2px solid light-dark(var(--gray-light-mode--200), var(--gray-dark-mode--200));
+		outline-offset: -2px;
+	}
+}
