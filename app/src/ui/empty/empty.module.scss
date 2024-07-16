@@ -1,0 +1,16 @@
+.empty {
+	align-items: center;
+	justify-content: center;
+}
+
+.emptyWrap {
+	flex-direction: column;
+	align-items: center;
+	gap: toRem(8px);
+
+	p {
+		@include font-size(sm);
+		font-weight: var(--font-weight-regular);
+		margin-bottom: toRem(16px);
+	}
+}
